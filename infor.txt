@@ -1,0 +1,50 @@
+Backups
+;logical 
+logical bacup  is the only way to back up single objects in a detabse such as (table,schema,database)
+
+
+pg_dump --- dumps single objects in a  custer 
+pg_dump
+a) plain text(p) ==> .sql
+b) tar (t) ==> .tar
+c) custom (c) ==> .dump
+d) diretory (d) .dir
+
+
+pg_dumpall ===> dumps the enteir cluster
+a) plain text (p) .sql
+b) 
+
+
+
+physical backup (the DB must be in archive log mode)
+
+a) cold backup ==> its taken when the database shutdown 
+(these files are not life bacause the database is shutown and it is a very safe kind if backup)
+b) hot backup ==> this is taken when the database is up and runing 
+c) pg_basebackup ==> this backsup the entire cluster 
+- tar (t) .tar
+- plain text (p) .sql
+
+backup from server to server
+palin text and tar
+entire cluster
+can be replicated 
+
+
+RESTORE
+Logical Backups
+a) p .sql (PSQL)
+B) t .tar (pg_restore)
+c) C .dumps (pg_restore)
+d) d .dir (pg_restore)
+
+
+the dir format is the only format we can restore omly a single format 
+
+
+
+
+populating a database 
+the smallest size of data is call  a block or a package
+- 8k 
